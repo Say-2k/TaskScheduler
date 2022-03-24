@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>TaskScheduler.Services.API.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="6.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.Configuration\Common.Configuration.csproj" />
+    <ProjectReference Include="..\Common\Common.Models\Common.Models.csproj" />
+    <ProjectReference Include="..\Data\TaskScheduler.Data.EntityFramework\TaskScheduler.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\TaskScheduler.Services\TaskScheduler.Services.csproj" />
+  </ItemGroup>
+
+</Project>
